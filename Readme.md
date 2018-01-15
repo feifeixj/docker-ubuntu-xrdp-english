@@ -9,7 +9,7 @@ Xfce4, Firefox are pre installed.
 Start the rdp server
 
 ```bash
-docker run -d --name uxrdp --hostname terminalserver --shm-size 1g -p 3389:3389 -p 2222:22 danielguerra/ubuntu-xrdp
+docker run -d --name uxrdp --hostname terminalserver --shm-size 1g -p 3389:3389 -p 2222:22 feifei0814/ubuntu-xrdp
 ```
 *note if you allready use a rdp server on 3389 change -p <my-port>:3389
 	  -p 2222:22 is for ssh access ( ssh -p 2222 ubuntu@<docker-ip> )
@@ -21,8 +21,8 @@ Use the Xorg session (leave as it is), user and pass.
 
 There is a sample user with sudo rights
 
-Username : ubuntu
-Password : ubuntu
+Username : user
+Password : user
 
 You can change your password in the rdp session in a terminal
 
