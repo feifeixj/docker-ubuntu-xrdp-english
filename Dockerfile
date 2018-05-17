@@ -12,16 +12,16 @@ ENV BUILD_DEPS="git autoconf pkg-config libssl-dev libpam0g-dev \
     libx11-dev libxfixes-dev libxrandr-dev nasm xsltproc flex \
     bison libxml2-dev dpkg-dev libcap-dev"
 RUN apt-get -yy install \ 
-	sudo apt-utils software-properties-common vim wget net-tools iputils-ping ca-certificates \
+    sudo apt-utils software-properties-common vim wget net-tools iputils-ping ca-certificates \
     xfce4 xfce4-terminal xfce4-screenshooter xfce4-taskmanager \
     xfce4-clipman-plugin xfce4-cpugraph-plugin xfce4-netload-plugin \
     xfce4-xkb-plugin xauth supervisor uuid-runtime pulseaudio locales \
     firefox pepperflashplugin-nonfree openssh-server \
     bwa samtools  zsh  ibus-kkc file  vcftools bedtools \
-    supervisor  libxml2 mock gcc make python bash  \ 
+    supervisor  libxml2 mock gcc make python bash traceroute \ 
     coreutils diffutils patch \
     $BUILD_DEPS
-
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # Build xrdp
 
